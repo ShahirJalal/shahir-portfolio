@@ -537,22 +537,6 @@
   @media (max-width:700px){ .stack-grid{ grid-template-columns:1fr 1fr; } .stack-col:last-child{ grid-column:span 2; } }
   @media (max-width:480px){ .stack-grid{ grid-template-columns:1fr; } .stack-col:last-child{ grid-column:auto; } }
 
-  /* ---------- CERTS ---------- */
-  .cert-row{
-    display:flex;
-    flex-direction:column;
-  }
-  .cert-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    padding:22px 0;
-    border-bottom:1px solid var(--border);
-  }
-  .cert-item:last-child{ border-bottom:none; }
-  .cert-item .cert-name{ font-family:var(--font-display); font-size:17px; font-weight:500; }
-  .cert-item .cert-issuer{ font-family:var(--font-mono); font-size:13px; color:var(--text-secondary); }
-
   /* ---------- GITHUB ---------- */
   .gh-stats{
     display:grid;
@@ -887,12 +871,17 @@
     <div class="reveal">
       <div class="exp-line">
         <div class="exp-main"><span class="company">Standard Chartered</span> — <span class="role">Java Developer</span></div>
-        <div class="exp-period">2024 — Present</div>
+        <div class="exp-period">2025 — Present</div>
         <div class="exp-detail">Enterprise Java on core banking systems — Spring Boot, Angular, Oracle.</div>
       </div>
       <div class="exp-line">
+        <div class="exp-main"><span class="company">Aevoco</span> — <span class="role">Software Engineer</span></div>
+        <div class="exp-period">2024 — 2025</div>
+        <div class="exp-detail">Full-stack development and deployment work across the team's stack.</div>
+      </div>
+      <div class="exp-line">
         <div class="exp-main"><span class="company">OpenApps</span> — <span class="role">Software Engineer</span></div>
-        <div class="exp-period">Prior</div>
+        <div class="exp-period">2023 — 2024</div>
         <div class="exp-detail">Full-stack Java and Angular development, Docker-based deployment workflows.</div>
       </div>
     </div>
@@ -939,23 +928,10 @@
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="container">
-    <span class="eyebrow reveal">05 / Certifications</span>
-    <h2 class="section-title reveal">Ongoing study</h2>
-    <div class="cert-row reveal">
-      <div class="cert-item"><span class="cert-name">Java</span><span class="cert-issuer">Code with Mosh</span></div>
-      <div class="cert-item"><span class="cert-name">Software Engineering</span><span class="cert-issuer">AirAsia</span></div>
-      <div class="cert-item"><span class="cert-name">Data & AI</span><span class="cert-issuer">MRANTI</span></div>
-    </div>
-  </div>
-</section>
-
 <!-- GITHUB -->
 <section id="github">
   <div class="container">
-    <span class="eyebrow reveal">06 / GitHub Activity</span>
+    <span class="eyebrow reveal">05 / GitHub Activity</span>
     <h2 class="section-title reveal">What's in the repos</h2>
     <p class="section-intro reveal">Live figures pulled from the GitHub API.</p>
     <div class="gh-stats reveal">
@@ -972,7 +948,7 @@
 <!-- BLOG -->
 <section id="blog">
   <div class="container">
-    <span class="eyebrow reveal">07 / Blog</span>
+    <span class="eyebrow reveal">06 / Blog</span>
     <h2 class="section-title reveal">Field notes</h2>
     <p class="section-intro reveal">Short write-ups from whatever I'm setting up, breaking, or fixing this month.</p>
     <div class="blog-list reveal">
@@ -995,7 +971,7 @@
 <!-- LAB -->
 <section id="lab">
   <div class="container">
-    <span class="eyebrow reveal">08 / Lab</span>
+    <span class="eyebrow reveal">07 / Lab</span>
     <h2 class="section-title reveal">Experiments</h2>
     <p class="section-intro reveal">Things I'm tinkering with outside of work — not polished, not always finished.</p>
     <div class="lab-grid reveal">
@@ -1003,6 +979,9 @@
       <div class="lab-item">Self-hosting</div>
       <div class="lab-item">Linux experiments</div>
       <div class="lab-item">Networking</div>
+      <div class="lab-item">Raspberry Pi</div>
+      <div class="lab-item">Arduino</div>
+      <div class="lab-item">ESP32</div>
     </div>
   </div>
 </section>
@@ -1010,7 +989,7 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <span class="eyebrow reveal">09 / Contact</span>
+    <span class="eyebrow reveal">08 / Contact</span>
     <h2 class="section-title reveal">Let's talk</h2>
     <div class="contact-inner reveal">
       <div class="avatar">SJ</div>
