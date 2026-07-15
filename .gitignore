@@ -17,9 +17,8 @@ Thumbs.db
 # Environment
 # ==========================================
 .env
-.env.local
-.env.production
-.env.development
+.env.*
+!.env.example
 
 # ==========================================
 # Angular
@@ -32,7 +31,6 @@ frontend/.angular/
 # Spring Boot
 # ==========================================
 backend/target/
-backend/.mvn/wrapper/maven-wrapper.jar
 
 # ==========================================
 # Logs
