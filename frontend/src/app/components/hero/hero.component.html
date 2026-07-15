@@ -1,0 +1,23 @@
+<section id="hero">
+  <canvas #networkCanvas id="network-canvas"></canvas>
+  <div class="container hero-inner">
+    <div class="hero-photo-row">
+      <div class="hero-photo">
+        <img *ngIf="photoLoaded" src="photo.png" alt="Shahir Jalal" (error)="onPhotoError()">
+        <span class="photo-fallback" [style.display]="photoLoaded ? 'none' : 'flex'">SJ</span>
+      </div>
+    </div>
+    <span class="hero-tag">Available for opportunities</span>
+    <h1 class="hero-name">SHAHIR JALAL</h1>
+    <div class="hero-role">Software Engineer</div>
+    <p class="hero-desc">Building scalable software, cloud infrastructure, and production-ready systems — from the first commit to the server it runs on.</p>
+    <div class="hero-stack">
+      <span>Java</span><span>Spring</span><span>Angular</span><span>Docker</span><span>Jenkins</span><span>AWS</span><span>Linux</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#systems" class="btn btn-primary">View Systems →</a>
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><div class="line"></div>SCROLL</div>
+</section>

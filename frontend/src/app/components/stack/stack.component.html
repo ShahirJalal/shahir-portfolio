@@ -1,0 +1,14 @@
+<section id="stack">
+  <div class="container">
+    <span class="eyebrow" appReveal>04 / Technical Stack</span>
+    <h2 class="section-title" appReveal>Tools of the trade</h2>
+    <div class="stack-grid" appReveal>
+      <div class="stack-col" *ngFor="let column of columns">
+        <h3>{{ column.title }}</h3>
+        <ul>
+          <li *ngFor="let item of column.items">{{ item }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

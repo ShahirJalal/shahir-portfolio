@@ -1,0 +1,25 @@
+<header>
+  <nav>
+    <a href="#hero" class="logo">shahir<span>.</span>jalal</a>
+    <div class="nav-links">
+      <a href="#systems">Systems</a>
+      <a href="#experience">Experience</a>
+      <a href="#stack">Stack</a>
+      <a href="#blog">Blog</a>
+      <a href="#lab">Lab</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" [attr.aria-expanded]="menuOpen()" (click)="toggleMenu()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-menu" [class.open]="menuOpen()">
+  <a href="#systems" (click)="closeMenu()">Systems</a>
+  <a href="#experience" (click)="closeMenu()">Experience</a>
+  <a href="#stack" (click)="closeMenu()">Stack</a>
+  <a href="#blog" (click)="closeMenu()">Blog</a>
+  <a href="#lab" (click)="closeMenu()">Lab</a>
+  <a href="#contact" (click)="closeMenu()">Contact</a>
+</div>

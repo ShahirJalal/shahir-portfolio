@@ -1,0 +1,13 @@
+<section id="experience">
+  <div class="container">
+    <span class="eyebrow" appReveal>03 / Experience</span>
+    <h2 class="section-title" appReveal>Where I've built</h2>
+    <div appReveal>
+      <div class="exp-line" *ngFor="let entry of entries">
+        <div class="exp-main"><span class="company">{{ entry.company }}</span> — <span class="role">{{ entry.role }}</span></div>
+        <div class="exp-period">{{ entry.period }}</div>
+        <div class="exp-detail">{{ entry.detail }}</div>
+      </div>
+    </div>
+  </div>
+</section>

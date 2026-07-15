@@ -1,0 +1,23 @@
+<div id="terminal-overlay" [class.open]="open">
+  <div class="term-bar">
+    <span class="term-dot" style="background:#FF5F56"></span>
+    <span class="term-dot" style="background:#FFBD2E"></span>
+    <span class="term-dot" style="background:#27C93F"></span>
+    <span style="margin-left:12px;">shahir&#64;production:~$</span>
+  </div>
+  <div id="term-output" #output>
+    <div class="term-line" *ngFor="let line of lines">{{ line }}</div>
+  </div>
+  <div class="term-input-row">
+    <span>$</span>
+    <input
+      #input
+      type="text"
+      id="term-input"
+      autocomplete="off"
+      spellcheck="false"
+      placeholder="type 'help'"
+      [(ngModel)]="inputValue"
+      (keydown)="onInputKeydown($event)">
+  </div>
+</div>

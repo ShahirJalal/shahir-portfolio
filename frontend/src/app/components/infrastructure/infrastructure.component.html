@@ -1,0 +1,35 @@
+<section id="infrastructure">
+  <div class="container">
+    <span class="eyebrow" appReveal>02 / Infrastructure</span>
+    <h2 class="section-title" appReveal>What it actually runs on</h2>
+    <p class="section-intro" appReveal>This site — and the systems above — live on infrastructure I provision and maintain myself.</p>
+    <figure class="infra-photo" appReveal>
+      <img src="server.jpg" alt="Lenovo ThinkCentre server on a side table">
+      <figcaption>The ThinkCentre this runs on.</figcaption>
+    </figure>
+    <div class="infra-layout" appReveal>
+      <ul class="infra-list">
+        <li><span class="name">Ubuntu Server</span> compute</li>
+        <li><span class="name">Docker</span> containerization</li>
+        <li><span class="name">Jenkins</span> CI/CD</li>
+        <li><span class="name">Nginx</span> reverse proxy</li>
+        <li><span class="name">Cloudflare Tunnel</span> ingress</li>
+        <li><span class="name">GitHub</span> source control</li>
+        <li><span class="name">Custom Domains</span> DNS</li>
+      </ul>
+      <div class="pipeline">
+        <div class="pipeline-node">GitHub</div>
+        <div class="pipeline-arrow"></div>
+        <div class="pipeline-node">Jenkins</div>
+        <div class="pipeline-arrow"></div>
+        <div class="pipeline-node">Docker</div>
+        <div class="pipeline-arrow"></div>
+        <div class="pipeline-node active">Ubuntu Server</div>
+        <div class="pipeline-arrow"></div>
+        <div class="pipeline-node">Cloudflare Tunnel</div>
+        <div class="pipeline-arrow"></div>
+        <div class="pipeline-node">Internet</div>
+      </div>
+    </div>
+  </div>
+</section>

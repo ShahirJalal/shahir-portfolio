@@ -1,0 +1,21 @@
+<section id="github">
+  <div class="container">
+    <span class="eyebrow" appReveal>05 / GitHub Activity</span>
+    <h2 class="section-title" appReveal>What's in the repos</h2>
+    <p class="section-intro" appReveal>Live figures pulled from the GitHub API.</p>
+    <div class="gh-stats" appReveal>
+      <div class="gh-stat"><div class="num">{{ repoCount ?? '—' }}</div><div class="label">Repositories</div></div>
+      <div class="gh-stat"><div class="num">{{ followerCount ?? '—' }}</div><div class="label">Followers</div></div>
+      <div class="gh-stat"><div class="num">{{ gistsCount ?? '—' }}</div><div class="label">Gists</div></div>
+    </div>
+    <div class="gh-repos" appReveal>
+      <div class="gh-repo" *ngIf="reposLoading"><span class="repo-name">Loading recent repositories…</span></div>
+      <div class="gh-repo" *ngIf="!reposLoading && reposFailed"><span class="repo-name">Could not load repositories</span></div>
+      <div class="gh-repo" *ngIf="!reposLoading && !reposFailed && repos.length === 0"><span class="repo-name">No public repositories yet</span></div>
+      <div class="gh-repo" *ngFor="let repo of repos">
+        <span class="repo-name">{{ repo.name }}</span>
+        <span class="repo-meta">★ {{ repo.stargazers_count }}</span>
+      </div>
+    </div>
+  </div>
+</section>

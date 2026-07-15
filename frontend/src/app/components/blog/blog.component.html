@@ -1,0 +1,13 @@
+<section id="blog">
+  <div class="container">
+    <span class="eyebrow" appReveal>06 / Blog</span>
+    <h2 class="section-title" appReveal>Field notes</h2>
+    <p class="section-intro" appReveal>Short write-ups from whatever I'm setting up, breaking, or fixing this month.</p>
+    <div class="blog-list" appReveal>
+      <div class="blog-item" *ngFor="let post of posts">
+        <div class="blog-head"><h3>{{ post.title }}</h3><span class="blog-status">{{ post.status }}</span></div>
+        <p>{{ post.excerpt }}</p>
+      </div>
+    </div>
+  </div>
+</section>
