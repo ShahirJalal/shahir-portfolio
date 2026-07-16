@@ -32,7 +32,7 @@ pipeline {
                 sh '''
                     sleep 10
 
-                    curl -f http://localhost:8083 > /dev/null
+                    curl -f http://localhost:8085 > /dev/null
 
                     echo "Portfolio is responding successfully."
                 '''
