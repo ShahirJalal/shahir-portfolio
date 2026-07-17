@@ -17,22 +17,22 @@ interface ExperienceEntry {
 })
 export class ExperienceComponent {
   entries: ExperienceEntry[] = [
-    {
-      company: 'Standard Chartered',
-      role: 'Java Developer',
-      period: '2025 — Present',
-      detail: 'Enterprise Java on core banking systems — Spring Boot, Angular, Oracle.'
-    },
-    {
-      company: 'Aevoco',
-      role: 'Software Engineer',
-      period: '2024 — 2025',
-      detail: "Full-stack development and deployment work across the team's stack."
-    },
+    // {
+    //   company: 'Standard Chartered',
+    //   role: 'Java Developer',
+    //   period: '2025 — Present',
+    //   detail: 'Enterprise Java on core banking systems — Spring Boot, Angular, Oracle.'
+    // },
+    // {
+    //   company: 'Aevoco',
+    //   role: 'Software Engineer',
+    //   period: '2024 — 2025',
+    //   detail: "Full-stack development and deployment work across the team's stack."
+    // },
     {
       company: 'OpenApps',
       role: 'Software Engineer',
-      period: '2023 — 2024',
+      period: '2023 — Present',
       detail: 'Full-stack Java and Angular development, Docker-based deployment workflows.'
     }
   ];
