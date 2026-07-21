@@ -19,10 +19,13 @@ pipeline {
             }
         }
 
+        // Temporary diagnostic test
         stage('Build & Deploy') {
             steps {
                 sh '''
-                    docker compose up -d --build
+                    echo "Sleeping for 8 minutes..."
+                    sleep 480
+                    echo "Finished sleeping."
                 '''
             }
         }
@@ -30,11 +33,7 @@ pipeline {
         stage('Verify Deployment') {
             steps {
                 sh '''
-                    sleep 10
-
-                    curl -f http://localhost:8085 > /dev/null
-
-                    echo "Portfolio is responding successfully."
+                    echo "Verify stage reached successfully."
                 '''
             }
         }
@@ -44,11 +43,11 @@ pipeline {
     post {
 
         success {
-            echo 'Shahir Portfolio deployed successfully!'
+            echo 'Sleep test completed successfully!'
         }
 
         failure {
-            echo 'Shahir Portfolio deployment failed.'
+            echo 'Sleep test failed.'
         }
 
         always {
