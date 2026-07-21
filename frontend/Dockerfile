@@ -9,7 +9,14 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+# Increase npm timeout and retry settings to make CI builds
+# more resilient to temporary network slowdowns.
+RUN npm config set fetch-retries 5 \
+ && npm config set fetch-retry-factor 2 \
+ && npm config set fetch-retry-mintimeout 20000 \
+ && npm config set fetch-retry-maxtimeout 120000 \
+ && npm config set fetch-timeout 600000 \
+ && npm ci
 
 # Copy the rest of the application
 COPY . .
