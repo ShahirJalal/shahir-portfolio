@@ -19,13 +19,27 @@ pipeline {
             }
         }
 
-        // Temporary diagnostic test
-        stage('Build & Deploy') {
+        stage('Build & Deploy Backend') {
             steps {
                 sh '''
-                    echo "Sleeping for 8 minutes..."
-                    sleep 480
-                    echo "Finished sleeping."
+                    docker compose build backend
+                    docker compose up -d backend
+                '''
+            }
+        }
+
+        stage('Build Frontend') {
+            steps {
+                sh '''
+                    docker compose build frontend
+                '''
+            }
+        }
+
+        stage('Start Frontend') {
+            steps {
+                sh '''
+                    docker compose up -d frontend
                 '''
             }
         }
@@ -33,21 +47,20 @@ pipeline {
         stage('Verify Deployment') {
             steps {
                 sh '''
-                    echo "Verify stage reached successfully."
+                    curl -f http://localhost:8083
                 '''
             }
         }
-
     }
 
     post {
 
         success {
-            echo 'Sleep test completed successfully!'
+            echo 'Deployment completed successfully!'
         }
 
         failure {
-            echo 'Sleep test failed.'
+            echo 'Deployment failed.'
         }
 
         always {

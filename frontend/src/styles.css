@@ -401,7 +401,7 @@ h1.hero-name{
   gap:56px;
   align-items:start;
 }
-.infra-list{ display:flex; flex-direction:column; gap:2px; }
+.infra-list{ display:flex; flex-direction:column; gap:2px; padding-top:37px; }
 .infra-list li{
   font-family:var(--font-mono);
   font-size:14px;
@@ -454,7 +454,7 @@ h1.hero-name{
   border-bottom:1px solid var(--text-secondary);
   rotate:45deg;
 }
-@media (max-width:800px){ .infra-layout{ grid-template-columns:1fr; } }
+@media (max-width:800px){ .infra-layout{ grid-template-columns:1fr; } .infra-list{ padding-top:0; } }
 
 .infra-photo{
   margin-bottom:40px;
