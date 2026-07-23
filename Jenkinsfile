@@ -1,6 +1,8 @@
 pipeline {
-    agent {
-        label 'ubuntu'
+    agent { label 'home-server' }
+
+    environment {
+        COMPOSE_PROJECT_NAME = "shahir-portfolio"
     }
 
     stages {
@@ -19,11 +21,10 @@ pipeline {
             }
         }
 
-        stage('Build & Deploy Backend') {
+        stage('Build Backend') {
             steps {
                 sh '''
                     docker compose build backend
-                    docker compose up -d backend
                 '''
             }
         }
@@ -36,10 +37,10 @@ pipeline {
             }
         }
 
-        stage('Start Frontend') {
+        stage('Start Stack') {
             steps {
                 sh '''
-                    docker compose up -d frontend
+                    docker compose up -d
                 '''
             }
         }
@@ -47,14 +48,17 @@ pipeline {
         stage('Verify Deployment') {
             steps {
                 sh '''
-                    curl -f http://localhost:8083
+                    sleep 20
+
+                    curl -f http://localhost:8083 >/dev/null
+
+                    echo "Portfolio deployment successful!"
                 '''
             }
         }
     }
 
     post {
-
         success {
             echo 'Deployment completed successfully!'
         }
@@ -66,7 +70,6 @@ pipeline {
         always {
             sh '''
                 docker image prune -f || true
-                docker builder prune -f || true
             '''
         }
     }
